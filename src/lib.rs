@@ -1,7 +1,7 @@
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 
-struct HashCode<T: Hash>(T);
+pub struct HashCode<T: Hash>(T);
 
 impl<T: Hash> Into<u64> for HashCode<T> {
     fn into(self) -> u64 {
